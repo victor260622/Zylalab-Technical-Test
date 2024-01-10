@@ -1,5 +1,5 @@
 <?php 
- $temperature = strip_tags($testing['cardHTML']);
+ $temperature = strip_tags($weatherArray['cardHTML']);
 ?>
 
 <!DOCTYPE html>
@@ -18,25 +18,25 @@
     
     <div class="p-5">
         <div >
-            <h1>{{ $testing['titleHTML']}}</h1>
+            <h1>{{ $weatherArray['titleHTML']}}</h1>
             <div class="d-flex flex-row row-gap-3 gap-2">
                 <p>
-                    {{ $testing['hourMinute'] }}                  
+                    {{ $weatherArray['hourMinute'] }}                  
                 </p>
                     |
                 <p>
-                    {{ $testing['dayName'] }}
+                    {{ $weatherArray['dayName'] }}
                 </p>
             </div>
         </div>
         <div class="p-3 rounded fw-bold d-flex flex-row row-gap-3 gap-3" style="max-width: 380px; background-color: #009ee2">
             <div>
-                <p>{{ $testing['descripcionHTML'] }}</p>
+                <p>{{ $weatherArray['descripcionHTML'] }}</p>
                 <h2 style="font-size: 4.625rem" class="m-0">{{ $temperature }}</h2>  
-                <p>{{ $testing['sensacionHTML'] }}</p>
+                <p>{{ $weatherArray['sensacionHTML'] }}</p>
             </div>
             <div>
-                {{ $testing['datosUvHTML']}}
+                {{ $weatherArray['datosUvHTML']}}
             </div>
         </div>
         <div>

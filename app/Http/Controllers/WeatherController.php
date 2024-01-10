@@ -61,7 +61,7 @@ class WeatherController extends Controller
         $crawler = new Crawler($websiteContent);
         $now = Carbon::now('America/Argentina/Buenos_Aires');
 
-        $arraytest = [
+        $weatherArray = [
             'cardHTML' => $crawler->filter('.dato-temperatura')->html(),
             'titleHTML' => $crawler->filter('.title-h1')->text(),
             'sensacionHTML' => $crawler->filter('.sensacion')->text(),
@@ -74,6 +74,6 @@ class WeatherController extends Controller
         ];
     
         /*return view('ba_weather', ['cardHTML' => $cardHTML,'titleHTML' => $titleHTML, 'dayName' => $dayName, 'hourMinute' => $hourMinute]);*/
-        return view('ba_weather', ['testing' => $arraytest]);
+        return view('ba_weather', ['weatherArray' => $weatherArray]);
     }
 }
